@@ -1,0 +1,15 @@
+<div *ngIf="person">
+  <div>
+    <label>Name: </label> {{person.name}}
+  </div>
+  <div>
+    <label>lastname: </label> {{person.lastname}}
+  </div>
+  <div>
+    <label>birthday: </label>{{person.birthday | date:'dd/MM/yyyy'}}
+  </div>
+
+  <span class="button is-small btn-danger" (click)='deletePerson()'>Delete</span>
+
+  <hr/>
+</div>

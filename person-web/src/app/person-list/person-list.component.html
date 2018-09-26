@@ -1,0 +1,7 @@
+<h1>People</h1>
+
+<div *ngFor="let person of persons | async" style="width: 300px;">
+  <person-details [person]='person'></person-details>
+</div>
+
+
