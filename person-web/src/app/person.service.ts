@@ -10,7 +10,7 @@ export class PersonService {
 
 
 
-  private baseUrl = 'http://localhost:8088/api';
+  private baseUrl = 'http://localhost:8081/scm/api';
 
   constructor(private http: HttpClient) { }
 
