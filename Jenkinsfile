@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('build stage'){
       steps {
-        bat 'cd person-service'
-		bat 'mvn clean test' 
+        bat 'mvn -f ./person-service clean test' 
       }
     }
   }
