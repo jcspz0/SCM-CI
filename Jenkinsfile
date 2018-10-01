@@ -17,10 +17,11 @@ pipeline {
       }
     }
 	stage('SonarQube analysis') {
-    withSonarQubeEnv('My SonarQube Server') {
-      // requires SonarQube Scanner for Maven 3.2+
-      bat 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
-    }
-  }
+		// requires SonarQube Scanner 2.8+
+		def scannerHome = tool 'sonar runner';
+		withSonarQubeEnv('My SonarQube Server') {
+		  bat "${scannerHome}/bin/sonar-scanner"
+		}
+	  }
   }
 }
