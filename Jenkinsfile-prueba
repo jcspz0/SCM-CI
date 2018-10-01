@@ -13,7 +13,7 @@ pipeline {
     }
 	stage('make artifact'){
       steps {
-        bat 'mvn package -Dmaven.test.skip=true' 
+        bat 'mvn package -Dmaven.test.skip=true' a
       }
     }
   }
