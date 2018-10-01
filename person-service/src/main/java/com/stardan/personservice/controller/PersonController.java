@@ -20,7 +20,7 @@ import com.stardan.personservice.service.PersonService;
 
 @Controller
 @RequestMapping("api")
-@CrossOrigin(origins = {"http://localhost:4200"}, maxAge = 4800, allowCredentials = "false")
+@CrossOrigin(origins = {"http://localhost:4200","http://192.168.1.12:8081"}, maxAge = 4800, allowCredentials = "false")
 public class PersonController {
 	
 	@Autowired
