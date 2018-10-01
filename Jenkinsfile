@@ -3,17 +3,17 @@ pipeline {
   stages {
     stage('compile'){
       steps {
-        bat 'mvn -f ./person-service clean compile' 
+        bat 'mvn clean compile' 
       }
     }
 	stage('test'){
       steps {
-        bat 'mvn -f ./person-service test' 
+        bat 'mvn test' 
       }
     }
 	stage('make artifact'){
       steps {
-        bat 'mvn -f ./person-service package -Dmaven.test.skip=true' 
+        bat 'mvn package -Dmaven.test.skip=true' 
       }
     }
   }
