@@ -16,12 +16,5 @@ pipeline {
         bat 'mvn package -Dmaven.test.skip=true' 
       }
     }
-	stage('SonarQube analysis') {
-		// requires SonarQube Scanner 2.8+
-		def scannerHome = tool 'sonar runner';
-		withSonarQubeEnv('My SonarQube Server') {
-		  bat "${scannerHome}/bin/sonar-scanner"
-		}
-	  }
   }
 }
