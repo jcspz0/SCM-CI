@@ -20,7 +20,7 @@ import com.stardan.personservice.service.PersonService;
 
 @Controller
 @RequestMapping("api")
-@CrossOrigin(origins = {"http://localhost:4200","http://192.168.1.12:8081","http://localhost:8081"}, maxAge = 4800, allowCredentials = "false")
+//@CrossOrigin(origins = {"http://localhost:4200","http://192.168.1.12:8081","http://localhost:8081","http://192.168.33.10:8081","http://10.0.2.15:8081"}, maxAge = 4800, allowCredentials = "false")
 public class PersonController {
 	
 	@Autowired
@@ -47,6 +47,7 @@ public class PersonController {
 		return new ResponseEntity<List<Person>>(list, HttpStatus.OK);
 	}
 	@PostMapping("person")
+	//@CrossOrigin(origins = {"http://localhost:4200","http://192.168.1.12:8081","http://localhost:8081","http://192.168.33.10:8081","http://10.0.2.15:8081"}, maxAge = 4800, allowCredentials = "false")
 	public ResponseEntity<Void> addPerson(@RequestBody Person person, UriComponentsBuilder builder) {
                 boolean flag = personService.addPerson(person);
                 if (flag == false) {
